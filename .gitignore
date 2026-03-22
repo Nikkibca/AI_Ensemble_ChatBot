@@ -44,10 +44,7 @@ instance/
 .DS_Store
 Thumbs.db
 
-# =========================
-# Frontend (Optional)
-# =========================
-node_modules/
+
 
 # =========================
 # Project Specific
