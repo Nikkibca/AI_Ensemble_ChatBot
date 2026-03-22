@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI Ensemble Chatbot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">🤖 AI Ensemble Chatbot</div>
+
+        <!-- Messages -->
+        <div id="chat-box" class="chat-box">
+          <div class="message bot">Hi! Ask me anything 😊</div>
+        </div>
+
+        <!-- Input -->
+        <div class="chat-input">
+          <input
+            type="text"
+            id="prompt"
+            placeholder="Type your message..."
+            onkeydown="
+              if (event.key === 'Enter') {
+                sendMessage();
+              }
+            "
+          />
+
+          <select id="prefer">
+            <option value="auto">Auto</option>
+            <option value="gemini">Gemini</option>
+            <option value="openai">OpenAI</option>
+          </select>
+
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/chat.js"></script>
+  </body>
+</html>
